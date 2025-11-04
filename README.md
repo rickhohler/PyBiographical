@@ -1,8 +1,8 @@
 # PyBiographical
 
-**Private shared library for metadata management**
+**Python library for biographical data management**
 
-Common utilities for person metadata, artifact metadata, location data, and biographical projects.
+Utilities for managing person metadata, location data, and biographical information.
 
 **Use Cases:**
 - Person metadata management (biographical, family research)
