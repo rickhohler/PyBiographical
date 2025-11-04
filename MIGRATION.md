@@ -17,7 +17,7 @@ Guide for migrating existing metadata/biographical projects to use `PyBiographic
 
 ```txt
 # In your project's requirements.txt
-git+ssh://git@github.com/username/PyBiographical.git@v0.2.0#egg=PyBiographical[matching]
+git+ssh://git@github.com/rickhohler/PyBiographical.git@v0.2.0#egg=PyBiographical[matching]
 ```
 
 ### 2. Install
@@ -546,7 +546,7 @@ print(f"✓ Validate: {len(issues)} files checked")
 **Solution:**
 ```bash
 # Reinstall PyBiographical
-pip install --force-reinstall git+ssh://git@github.com/username/PyBiographical.git[matching]
+pip install --force-reinstall git+ssh://git@github.com/rickhohler/PyBiographical.git[matching]
 ```
 
 ---
@@ -561,7 +561,7 @@ pip install --force-reinstall git+ssh://git@github.com/username/PyBiographical.g
 pip install rapidfuzz
 
 # Or reinstall with extras
-pip install "git+ssh://git@github.com/username/PyBiographical.git[matching]"
+pip install "git+ssh://git@github.com/rickhohler/PyBiographical.git[matching]"
 ```
 
 ---

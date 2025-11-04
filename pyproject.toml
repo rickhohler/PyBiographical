@@ -34,16 +34,15 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Information Analysis",
 ]
-
-[project.urls]
-Homepage = "https://github.com/username/PyBiographical"
-Repository = "https://github.com/username/PyBiographical"
-Issues = "https://github.com/username/PyBiographical/issues"
-Changelog = "https://github.com/username/PyBiographical/blob/main/CHANGELOG.md"
-
 dependencies = [
     "ruamel.yaml>=0.17.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/rickhohler/PyBiographical"
+Repository = "https://github.com/rickhohler/PyBiographical"
+Issues = "https://github.com/rickhohler/PyBiographical/issues"
+Changelog = "https://github.com/rickhohler/PyBiographical/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

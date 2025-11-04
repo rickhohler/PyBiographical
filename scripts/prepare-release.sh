@@ -124,8 +124,8 @@ if [[ -n "$VERSION_TYPE" ]] && [[ "$NEW_VERSION" != "$CURRENT_VERSION" ]]; then
         
         # Update comparison links at bottom
         if grep -q "\[Unreleased\]:" CHANGELOG.md; then
-            sed -i.bak "s|\[Unreleased\]:.*|[Unreleased]: https://github.com/username/PyBiographical/compare/v${NEW_VERSION}...HEAD\\
-[${NEW_VERSION}]: https://github.com/username/PyBiographical/compare/v${CURRENT_VERSION}...v${NEW_VERSION}|" CHANGELOG.md
+            sed -i.bak "s|\[Unreleased\]:.*|[Unreleased]: https://github.com/rickhohler/PyBiographical/compare/v${NEW_VERSION}...HEAD\\
+[${NEW_VERSION}]: https://github.com/rickhohler/PyBiographical/compare/v${CURRENT_VERSION}...v${NEW_VERSION}|" CHANGELOG.md
         fi
         
         rm CHANGELOG.md.bak

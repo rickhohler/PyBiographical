@@ -42,7 +42,7 @@ pybiographical[full]>=0.2.0
 
 ```bash
 # Clone and install in editable mode
-git clone https://github.com/username/PyBiographical.git
+git clone https://github.com/rickhohler/PyBiographical.git
 cd PyBiographical
 pip install -e .[dev]
 ```
@@ -619,7 +619,7 @@ ruff check src/
 
 All development, features, and issues are tracked using GitHub Projects:
 
-**[PyBiographical Project Board](https://github.com/users/username/projects/PyBiographical)**
+**[PyBiographical Project Board](https://github.com/users/rickhohler/projects/29)**
 
 This includes:
 - Feature roadmap
@@ -651,6 +651,6 @@ MIT License - See [LICENSE](LICENSE) file for details.
 ## Support
 
 For issues or questions:
-- **GitHub Issues**: [Create an issue](https://github.com/username/PyBiographical/issues)
-- **GitHub Discussions**: [Join the discussion](https://github.com/username/PyBiographical/discussions)
-- **Project Board**: [View progress](https://github.com/users/username/projects/PyBiographical)
+- **GitHub Issues**: [Create an issue](https://github.com/rickhohler/PyBiographical/issues)
+- **GitHub Discussions**: [Join the discussion](https://github.com/rickhohler/PyBiographical/discussions)
+- **Project Board**: [View progress](https://github.com/users/rickhohler/projects/29)

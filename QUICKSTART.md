@@ -6,10 +6,10 @@ Fast guide to using `PyBiographical` in metadata projects.
 
 ```bash
 # From your project directory
-pip install git+ssh://git@github.com/username/PyBiographical.git
+pip install git+ssh://git@github.com/rickhohler/PyBiographical.git
 
 # Or with optional fuzzy matching (recommended)
-pip install "git+ssh://git@github.com/username/PyBiographical.git[matching]"
+pip install "git+ssh://git@github.com/rickhohler/PyBiographical.git[matching]"
 ```
 
 ## Basic Usage
@@ -274,7 +274,7 @@ results = crud.search(
 pip install rapidfuzz
 
 # Or install PyBiographical with extras
-pip install "git+ssh://git@github.com/username/PyBiographical.git[matching]"
+pip install "git+ssh://git@github.com/rickhohler/PyBiographical.git[matching]"
 ```
 
 ### "No backups found"
@@ -313,5 +313,5 @@ if fixed:
 ## Support
 
 For issues or questions:
-- GitHub: https://github.com/username/PyBiographical
+- GitHub: https://github.com/rickhohler/PyBiographical
 - Project repos: biographical, metadata, media-tagging

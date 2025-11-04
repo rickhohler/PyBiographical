@@ -6,7 +6,7 @@ Thank you for your interest in contributing to PyBiographical!
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/PyBiographical.git
+git clone https://github.com/rickhohler/PyBiographical.git
 cd PyBiographical
 
 # Install in editable mode with dev dependencies
