@@ -45,6 +45,15 @@ git+ssh://git@github.com/username/PyBiographical.git@v0.1.0#egg=PyBiographical
 
 High-performance I/O using `/Volumes/RAMDisk` for macOS systems.
 
+**Setup RAM Disk (12GB):**
+```bash
+# Create RAM disk if it doesn't exist
+if [ ! -d "/Volumes/RAMDisk" ]; then
+   diskutil erasevolume HFS+ "RAMDisk" `hdiutil attach -nomount ram://25165824`
+fi
+```
+
+**Python Usage:**
 ```python
 from pybiographical import RAMDiskContext
 from pathlib import Path
