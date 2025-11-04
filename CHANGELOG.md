@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Initial public release preparation
-- Documentation cleanup for public repository
+## [0.2.1] - 2025-11-04
+
+### Fixed
+- Corrected GitHub Project Board links to use actual project number
+- Fixed package import to work without environment variables
+- Updated CI/CD workflow to match simplified public API
+
+### Changed
+- Removed env module from public API (still available via `from pybiographical.env import ...`)
+- Environment variables now optional, not required at import time
 
 ## [0.2.0] - 2025-11-04
 
@@ -47,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Automatic file staging and copy-back
   - 2-4x performance improvement for cloud-synced directories
 
-[Unreleased]: https://github.com/rickhohler/PyBiographical/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/rickhohler/PyBiographical/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/rickhohler/PyBiographical/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/rickhohler/PyBiographical/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/rickhohler/PyBiographical/releases/tag/v0.1.0
