@@ -47,8 +47,7 @@ High-performance I/O using RAM disk for faster file operations (especially usefu
 
 **Setup RAM Disk (12GB):**
 
-<details>
-<summary><b>macOS</b></summary>
+#### macOS
 
 ```bash
 # Create RAM disk if it doesn't exist
@@ -56,10 +55,8 @@ if [ ! -d "/Volumes/RAMDisk" ]; then
    diskutil erasevolume HFS+ "RAMDisk" `hdiutil attach -nomount ram://25165824`
 fi
 ```
-</details>
 
-<details>
-<summary><b>Linux</b></summary>
+#### Linux
 
 ```bash
 # Create RAM disk using tmpfs (12GB)
@@ -69,10 +66,8 @@ sudo mount -t tmpfs -o size=12G tmpfs /mnt/ramdisk
 # To make it permanent, add to /etc/fstab:
 # tmpfs /mnt/ramdisk tmpfs nodev,nosuid,size=12G 0 0
 ```
-</details>
 
-<details>
-<summary><b>Windows (PowerShell as Administrator)</b></summary>
+#### Windows (PowerShell as Administrator)
 
 ```powershell
 # Using ImDisk Toolkit (free, open-source)
@@ -86,7 +81,6 @@ imdisk -a -s 12G -m R: -p "/fs:ntfs /q /y"
 # - SoftPerfect RAM Disk
 # - Dataram RAMDisk
 ```
-</details>
 
 **Python Usage:**
 ```python
