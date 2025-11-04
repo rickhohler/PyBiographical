@@ -584,9 +584,29 @@ ruff check src/
 
 ## Requirements
 
-- Python ≥3.8
-- macOS (for RAM disk features)
-- `~/bin/ramdisk.sh` script (for automatic RAM disk creation)
+### Core Requirements
+
+- **Python** ≥3.8
+- **ruamel.yaml** ≥0.17.0 (installed automatically)
+
+### Optional Dependencies
+
+- **rapidfuzz** ≥3.0.0 - For fuzzy matching features
+  ```bash
+  pip install pybiographical[matching]
+  ```
+
+- **Development tools** - For contributing
+  ```bash
+  pip install pybiographical[dev]
+  ```
+
+### Platform-Specific Features
+
+**RAM Disk Utilities:**
+- Available on macOS, Linux, and Windows
+- Optional - library works without RAM disk
+- See [RAM Disk Setup](#ram-disk-utilities) for platform-specific instructions
 
 ## Version History
 
