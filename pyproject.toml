@@ -12,15 +12,34 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
+keywords = [
+    "biographical",
+    "metadata",
+    "person-data",
+    "location-data",
+    "fuzzy-matching",
+    "yaml",
+    "data-management",
+]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis",
 ]
+
+[project.urls]
+Homepage = "https://github.com/username/PyBiographical"
+Repository = "https://github.com/username/PyBiographical"
+Issues = "https://github.com/username/PyBiographical/issues"
+Changelog = "https://github.com/username/PyBiographical/blob/main/CHANGELOG.md"
 
 dependencies = [
     "ruamel.yaml>=0.17.0",

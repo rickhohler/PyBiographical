@@ -12,31 +12,39 @@ Utilities for managing person metadata, location data, and biographical informat
 
 ## Installation
 
-### From GitHub (Editable - for development)
+### From PyPI (Recommended)
 
 ```bash
-# Clone and install in editable mode
-cd ~/projects
-git clone git@github.com:username/PyBiographical.git
-cd PyBiographical
-pip install -e .
-```
+# Install the latest version
+pip install pybiographical
 
-### From GitHub (Standard install)
+# Install with optional fuzzy matching support
+pip install pybiographical[matching]
 
-```bash
-# Install directly from GitHub
-pip install git+ssh://git@github.com/username/PyBiographical.git
+# Install with all optional features
+pip install pybiographical[full]
 ```
 
 ### In requirements.txt
 
-```
-# For development (editable)
--e git+ssh://git@github.com/username/PyBiographical.git#egg=PyBiographical
+```txt
+# Basic installation
+pybiographical>=0.2.0
 
-# For production (specific version)
-git+ssh://git@github.com/username/PyBiographical.git@v0.1.0#egg=PyBiographical
+# With fuzzy matching
+pybiographical[matching]>=0.2.0
+
+# With all features
+pybiographical[full]>=0.2.0
+```
+
+### From Source (for development)
+
+```bash
+# Clone and install in editable mode
+git clone https://github.com/username/PyBiographical.git
+cd PyBiographical
+pip install -e .[dev]
 ```
 
 ## Features
