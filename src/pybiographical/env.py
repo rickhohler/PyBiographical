@@ -39,13 +39,12 @@ def check_environment_variables():
         sys.exit(1)
 
 
-# Validate environment at import time
-check_environment_variables()
-
-# Export validated environment variables
-MEDIA_INPUT = os.environ['MEDIA_INPUT']
-MEDIA_PROCESSED = os.environ['MEDIA_PROCESSED']
-METADATA_ROOT = os.environ['METADATA_ROOT']
+# Export environment variables (only if set)
+# Note: For public library use, these are optional.
+# Call check_environment_variables() explicitly if you need validation.
+MEDIA_INPUT = os.environ.get('MEDIA_INPUT', '')
+MEDIA_PROCESSED = os.environ.get('MEDIA_PROCESSED', '')
+METADATA_ROOT = os.environ.get('METADATA_ROOT', '')
 
 
 # Common path accessors
