@@ -1,4 +1,4 @@
-# Release Notes - PyCommon v0.2.0
+# Release Notes - PyBiographical v0.2.0
 
 **Release Date:** November 3, 2025  
 **Migration Status:** ✅ Complete (100%)

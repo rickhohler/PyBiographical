@@ -1,5 +1,5 @@
 """
-PyCommon - Common utilities for genealogy projects.
+PyBiographical - Common utilities for genealogy projects.
 
 Private shared library for genealogy, metadata, and media-tagging projects.
 """

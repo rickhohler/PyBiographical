@@ -1,4 +1,4 @@
-# PyCommon Quick Start Guide
+# PyBiographical Quick Start Guide
 
 Fast guide to using `PyBiographical` in metadata projects.
 

@@ -1,4 +1,4 @@
-# Migration Guide: Integrating PyCommon into Existing Projects
+# Migration Guide: Integrating PyBiographical into Existing Projects
 
 Guide for migrating existing metadata/biographical projects to use `PyBiographical`.
 

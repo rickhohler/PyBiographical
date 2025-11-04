@@ -1,4 +1,4 @@
-# PyCommon Roadmap
+# PyBiographical Roadmap
 
 Future enhancements and migration opportunities for PyBiographical and consuming projects.
 

@@ -1,4 +1,4 @@
-# PyCommon Migration Progress Report
+# PyBiographical Migration Progress Report
 
 **Date:** November 3, 2025  
 **Version Target:** 0.2.0  
@@ -133,7 +133,7 @@
 - `PyBiographical.locations.*` (location data)
 
 **Rationale:** 
-- PyCommon is a **metadata management library**
+- PyBiographical is a **metadata management library**
 - Genealogy is a **use case**, not the primary purpose
 - Supports multiple domains: biographical, media-tagging, general metadata
 
