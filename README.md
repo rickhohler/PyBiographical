@@ -595,13 +595,30 @@ ruff check src/
 | 0.2.0 | 2025-11-03 | **Major Feature Release**<br>• Person metadata YAML utilities (load, dump, backup)<br>• Person metadata validation with auto-fix<br>• Fuzzy matching for names and locations<br>• PersonCRUD class with full CRUD operations<br>• Duplicate detection and confidence scoring<br>• Archive/restore functionality<br>• Optional rapidfuzz dependency for performance |
 | 0.1.0 | 2025-11-03 | Initial release with RAM disk utilities |
 
+## Project Tracking
+
+All development, features, and issues are tracked using GitHub Projects:
+
+**[PyBiographical Project Board](https://github.com/users/username/projects/PyBiographical)**
+
+This includes:
+- Feature roadmap
+- Bug tracking
+- Enhancement requests
+- Release planning
+- Documentation tasks
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, coding standards, and how to submit pull requests.
+
 ## License
 
-Private - For use in Jane Smith's biographical projects only.
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ## Support
 
-For issues or questions, see the individual project repositories:
-- [biographical](https://github.com/username/biographical)
-- [metadata](https://github.com/username/metadata)  
-- [media-tagging](https://github.com/username/media-tagging)
+For issues or questions:
+- **GitHub Issues**: [Create an issue](https://github.com/username/PyBiographical/issues)
+- **GitHub Discussions**: [Join the discussion](https://github.com/username/PyBiographical/discussions)
+- **Project Board**: [View progress](https://github.com/users/username/projects/PyBiographical)
