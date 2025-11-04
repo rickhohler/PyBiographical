@@ -43,15 +43,50 @@ git+ssh://git@github.com/username/PyBiographical.git@v0.1.0#egg=PyBiographical
 
 ### RAM Disk Utilities
 
-High-performance I/O using `/Volumes/RAMDisk` for macOS systems.
+High-performance I/O using RAM disk for faster file operations (especially useful for cloud-synced directories).
 
 **Setup RAM Disk (12GB):**
+
+<details>
+<summary><b>macOS</b></summary>
+
 ```bash
 # Create RAM disk if it doesn't exist
 if [ ! -d "/Volumes/RAMDisk" ]; then
    diskutil erasevolume HFS+ "RAMDisk" `hdiutil attach -nomount ram://25165824`
 fi
 ```
+</details>
+
+<details>
+<summary><b>Linux</b></summary>
+
+```bash
+# Create RAM disk using tmpfs (12GB)
+sudo mkdir -p /mnt/ramdisk
+sudo mount -t tmpfs -o size=12G tmpfs /mnt/ramdisk
+
+# To make it permanent, add to /etc/fstab:
+# tmpfs /mnt/ramdisk tmpfs nodev,nosuid,size=12G 0 0
+```
+</details>
+
+<details>
+<summary><b>Windows (PowerShell as Administrator)</b></summary>
+
+```powershell
+# Using ImDisk Toolkit (free, open-source)
+# Download from: https://sourceforge.net/projects/imdisk-toolkit/
+
+# Create 12GB RAM disk at drive R:
+imdisk -a -s 12G -m R: -p "/fs:ntfs /q /y"
+
+# Alternative: Use built-in with third-party tools like:
+# - AMD Radeon RAMDisk
+# - SoftPerfect RAM Disk
+# - Dataram RAMDisk
+```
+</details>
 
 **Python Usage:**
 ```python
