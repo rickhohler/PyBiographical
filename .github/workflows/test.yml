@@ -165,10 +165,11 @@ jobs:
         path: dist/
 
   publish-testpypi:
-    name: Publish to TestPyPI
+    name: Publish to TestPyPI (Optional)
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    continue-on-error: true  # Optional - allows PyPI publish even if TestPyPI fails
     environment:
       name: testpypi
       url: https://test.pypi.org/p/pybiographical
@@ -188,9 +189,10 @@ jobs:
         repository-url: https://test.pypi.org/legacy/
 
   publish-pypi:
-    name: Publish to PyPI
+    name: Publish to PyPI (Production)
     runs-on: ubuntu-latest
-    needs: publish-testpypi
+    needs: [build, publish-testpypi]
+    # ONLY publish to PyPI when a version tag is pushed (e.g., v0.2.1)
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     environment:
       name: pypi

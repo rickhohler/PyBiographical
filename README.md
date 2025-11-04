@@ -608,6 +608,18 @@ This includes:
 - Release planning
 - Documentation tasks
 
+### AI-Assisted Development
+
+When using AI agents for development:
+
+1. **Create issues** in GitHub Projects with clear descriptions
+2. **Pull issues** into AI context using the sync script in `PyBiographicalAI` repo
+3. **Work on issues** with full project context
+4. **Update issues** via `gh` CLI as work progresses
+5. **Close issues** when complete
+
+See the `PyBiographicalAI` repository for scripts and documentation.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, coding standards, and how to submit pull requests.
