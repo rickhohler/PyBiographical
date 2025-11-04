@@ -30,38 +30,11 @@ jobs:
         pip install pytest pytest-cov
         pip install -e .
     
-    - name: Set up environment variables for testing
-      run: |
-        echo "MEDIA_INPUT=${{ github.workspace }}/test_data/input" >> $GITHUB_ENV
-        echo "MEDIA_PROCESSED=${{ github.workspace }}/test_data/processed" >> $GITHUB_ENV
-        echo "METADATA_ROOT=${{ github.workspace }}/test_data/metadata" >> $GITHUB_ENV
-        mkdir -p test_data/input test_data/processed test_data/metadata/data/persons
-    
     - name: Lint with ruff (if available)
       run: |
         pip install ruff || true
         ruff check src/ || echo "Ruff not configured or linting issues found"
       continue-on-error: true
-    
-    - name: Test environment variable validation
-      run: |
-        python -c "from pybiographical.env import MEDIA_INPUT, MEDIA_PROCESSED, METADATA_ROOT; print(f'✓ Environment variables loaded: {MEDIA_INPUT}, {MEDIA_PROCESSED}, {METADATA_ROOT}')"
-    
-    - name: Test helper functions
-      run: |
-        python << 'EOF'
-        from pybiographical import persons_dir, locations_dir, extracted_photos_dir, ensure_dir
-        import os
-        
-        print(f'✓ persons_dir(): {persons_dir()}')
-        print(f'✓ locations_dir(): {locations_dir()}')
-        print(f'✓ extracted_photos_dir(): {extracted_photos_dir()}')
-        
-        # Test ensure_dir
-        test_dir = ensure_dir('test_data/test_ensure')
-        assert os.path.exists(test_dir), 'ensure_dir failed'
-        print(f'✓ ensure_dir() created: {test_dir}')
-        EOF
     
     - name: Run pytest
       run: |
@@ -74,8 +47,9 @@ jobs:
     - name: Test module imports
       run: |
         python -c "import pybiographical; print(f'✓ pybiographical version: {pybiographical.__version__}')"
-        python -c "from pybiographical import env; print('✓ pybiographical.env imported successfully')"
-        python -c "from pybiographical.env import check_environment_variables; print('✓ check_environment_variables imported')"
+        python -c "from pybiographical import RAMDisk, RAMDiskContext; print('✓ RAMDisk utilities imported')"
+        python -c "from pybiographical.io import load_yaml, dump_yaml; print('✓ IO utilities imported')"
+        python -c "from pybiographical.persons import PersonCRUD; print('✓ Person utilities imported')"
     
     - name: Type checking with mypy (if available)
       run: |
@@ -108,23 +82,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .
     
-    - name: Test environment variable validation failure
+    - name: Test import without environment variables
       run: |
-        # Unset all env vars and verify the module exits with error
+        # Test that the package can be imported without any environment variables
         unset MEDIA_INPUT MEDIA_PROCESSED METADATA_ROOT
-        python << 'EOF' || echo "✓ Environment validation works correctly"
-        try:
-            from pybiographical import env
-            print('✗ Should have exited with error')
-            exit(1)
-        except SystemExit as e:
-            if e.code == 1:
-                print('✓ Correctly exits when environment variables are missing')
-                exit(0)
-            else:
-                print('✗ Unexpected exit code')
-                exit(1)
-        EOF
+        python -c "import pybiographical; print(f'✓ Package imported successfully: v{pybiographical.__version__}')"
+        python -c "from pybiographical import RAMDiskContext; print('✓ RAMDiskContext imported without env vars')"
 
   build:
     runs-on: ubuntu-latest
