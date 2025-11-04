@@ -45,7 +45,9 @@ git+ssh://git@github.com/username/PyBiographical.git@v0.1.0#egg=PyBiographical
 
 High-performance I/O using RAM disk for faster file operations (especially useful for cloud-synced directories).
 
-**Setup RAM Disk (12GB):**
+**Setup RAM Disk:**
+
+> **Note:** The examples below use 12GB as a reference. Adjust the size based on your use case and available RAM.
 
 #### macOS
 
